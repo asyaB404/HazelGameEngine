@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "新建配置文件",
+    "Projects": [
+      {
+        "Path": "SandBox\\SandBox.vcxproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Hazel\\Hazel.vcxproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
