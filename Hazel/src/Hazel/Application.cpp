@@ -11,11 +11,11 @@ namespace Hazel {
         WindowResizeEvent e(1280, 720);
         if (e.IsInCategory(EventCategoryApplication))
         {
-            HZ_TRACE(e);
+            HZ_TRACE(e.ToString());
         }
         if (e.IsInCategory(EventCategoryInput))
         {
-            HZ_TRACE(e);
+            HZ_TRACE(e.ToString());
         }
 
         while (true);
