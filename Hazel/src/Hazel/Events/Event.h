@@ -23,10 +23,11 @@ namespace Hazel {
 		AppRender,      // 应用程序渲染
 		KeyPressed,     // 按键按下
 		KeyReleased,    // 按键释放
+		KeyTyped,       // 按键输入
 		MouseButtonPressed,  // 鼠标按钮按下
 		MouseButtonReleased, // 鼠标按钮释放
 		MouseMoved,     // 鼠标移动
-		MouseScrolled   // 鼠标滚动
+		MouseScrolled,   // 鼠标滚动
 	};
 
 	// 事件类别枚举，使用位运算标识事件类别
