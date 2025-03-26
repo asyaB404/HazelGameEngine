@@ -9,9 +9,12 @@ namespace Hazel {
 
 	// 宏定义：将成员函数绑定到 std::bind 就是把隐藏的this参数
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+	Application* Application::s_Instance = nullptr;
 
 // 构造函数：创建窗口并设置事件回调
 	Application::Application() {
+		HZ_CORE_ASSERT(!s_Instance, "Application already exists!");
+		s_Instance = this;
 		// 使用智能指针创建窗口对象
 		m_Window = std::unique_ptr<Window>(Window::Create());
 
@@ -25,11 +28,13 @@ namespace Hazel {
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	// 事件处理函数
