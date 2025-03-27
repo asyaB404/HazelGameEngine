@@ -4,6 +4,7 @@
 #include "Application.h"   // 应用程序类的声明
 #include "Log.h"           // 日志系统
 #include <glad/glad.h>
+#include "Input.h"
 
 namespace Hazel {
 
