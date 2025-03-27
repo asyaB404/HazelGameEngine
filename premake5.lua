@@ -58,7 +58,6 @@ workspace "Hazel"
  
  	filter "system:windows"
  		cppdialect "C++17"
- 		staticruntime "On"
  		systemversion "latest"
         buildoptions { "/utf-8" }
  
